@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Flex, Line } from '.';
 
 const StyledConsole = styled.textarea`
-  width: 100%;
+  flex: 1 1 auto;
   height: 70vh;
   background: #000;
   font-size: 24px;
@@ -15,8 +15,10 @@ const StyledConsole = styled.textarea`
     outline: none;
   }
   @media ${(props) => props.theme.media.tablet} {
+    height: 60vh;
   }
   @media ${(props) => props.theme.media.phone} {
+    flex: 1 1 100%;
   }
 `;
 
@@ -24,7 +26,7 @@ const Console = ({ color, ...props }) => {
   const [lines, setLines] = React.useState(['C:\\Windows\\System32>']);
 
   const onKeyPress = (e) => {
-    if (e.charCode === 13) {
+    if (e.key === 'Enter') {
       setLines((prev) => [...prev, 'C:\\Windows\\System32>']);
     }
   };
