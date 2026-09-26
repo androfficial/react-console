@@ -19,10 +19,10 @@ const App = () => {
       <Flex direction="column" margin="10px 0">
         <Console />
         <Button
-          onClick={() => alert('Нажми Enter чтобы отправить команду.')}
+          onClick={() => alert('Press Enter to send a command.')}
           color="green"
           align="flex-end">
-          Отправить
+          Send
         </Button>
       </Flex>
     </AppWrapper>
